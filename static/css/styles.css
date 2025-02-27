@@ -1,0 +1,217 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Poppins:wght@300;500;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: radial-gradient(circle at 50% 50%, rgba(255, 0, 255, 0.3), rgba(0, 0, 30, 1));
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    height: 100vh;
+    display: block; /* Ensures normal document flow (stacks elements vertically) */
+    justify-content: center;
+    align-items: center;
+}
+
+/* Glowing Card Container */
+.container {
+    width: 90%;
+    max-width: 900px;
+    padding: 40px;
+    text-align: center;
+    border-radius: 12px;
+    background: rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 0px 30px rgba(255, 0, 255, 0.6);
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 0, 255, 0.4);
+    display: flex; /* Enables Flexbox */
+    flex-direction: column; /* Stacks items vertically */
+    align-items: center; /* Centers items horizontally */
+    justify-content: center; /* Centers items vertically */
+    gap: 20px; /* Adds spacing between the boxes */
+    width: 100%; 
+    margin: 20px auto;
+}
+/* Card Styling */
+.card {
+    background: rgba(255, 0, 255, 0.1); /* Light Neon Effect */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px rgba(255, 0, 255, 0.5);
+    width: 80%; /* Adjust width to prevent full screen stretch */
+    text-align: center;
+    backdrop-filter: blur(10px);
+}
+/* Cyberpunk Title */
+h1 {
+    font-size: 3rem;
+    padding: 40px;
+    font-family: 'Orbitron', sans-serif;
+    text-transform: uppercase;
+    background: linear-gradient(90deg, #ff00ff, #ff0077);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Navigation Bar */
+.navbar {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    position: fixed; /* FIXED NAVIGATION */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* Keeps it above other elements */
+    padding: 10px 0;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+}
+.navbar li {
+    margin: 0 15px;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    margin: 0 15px;
+    transition: 0.3s;
+}
+
+.navbar a:hover {
+    color: #ff00ff;
+    text-shadow: 0 0 10px #ff00ff;
+    box-shadow: 0px 0px 15px #ff00ff;
+}
+
+/* Download Button */
+.btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 30px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: white;
+    border: 2px solid #ff00ff;
+    border-radius: 30px;
+    background: transparent;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #ff00ff;
+    box-shadow: 0px 0px 15px #ff00ff;
+}
+/* Table Styling */
+table {
+    width: 100%;
+    max-width: 900px;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background: rgba(255, 0, 255, 0.1);
+    color: white;
+    box-shadow: 0px 0px 15px rgba(255, 0, 255, 0.5);
+}
+
+th, td {
+    border: 1px solid rgba(255, 0, 255, 0.5);
+    padding: 10px;
+    text-align: center;
+}
+
+th {
+    background: rgba(255, 0, 255, 0.3);
+    font-weight: bold;
+}
+a {
+    color: #b717b7; /* Vibrant magenta */
+    font-weight: bold;
+    text-decoration: none; /* Optional: Removes underline */
+    transition: color 0.3s ease-in-out;
+}
+
+a:hover {
+    color: #ff4500; /* Bright orange for hover effect */
+    text-decoration: underline; /* Optional: Adds underline on hover */
+}
+.button-link {
+    color: #ff00ff;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+.button-link:hover {
+    color: #ff4500;
+    text-decoration: underline;
+}
+/* ========================== */
+/* RESPONSIVE DESIGN */
+/* ========================== */
+
+/* Small screens (tablets and smaller) */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        position: relative;
+        top: 0;
+        padding: 10px 0;
+    }
+    .navbar li {
+        margin: 5px 0;
+    }
+    .navbar a {
+        display: block;
+        margin: 10px 0;
+    }
+
+    h1 {
+        margin: 50px 50px;
+        font-size: 3rem;
+    }
+
+    .container {
+        width: 95%;
+        padding: 30px;
+        display: flex;
+        flex-direction: column; /* STACKS ITEMS VERTICALLY */
+        align-items: center; /* Centers items horizontally */
+        justify-content: center; /* Centers items vertically */
+        gap: 20px; /* Adds space between boxes */
+        width: 100%;
+        max-width: 900px;
+        margin: 0 auto;
+        }
+
+    .btn {
+        font-size: 1rem;
+        padding: 10px 20px;
+    }
+}
+
+/* Extra Small Screens (Mobile Phones) */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    .container {
+        padding: 20px;
+    }
+
+    .btn {
+        font-size: 0.9rem;
+        padding: 8px 18px;
+    }
+}
